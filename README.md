@@ -29,10 +29,11 @@ jobs:
     - name: Check out code
       uses: actions/checkout@master
     - name: Deploy to Firebase
-      uses: chrissank/deploy-firebase-functions@1.0.0
+      uses: dawogfather/deploy-firebase-functions@1.0.0
       env:
         FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
         TARGET: default
+        firebaseToolsVersion: v11.30.0
 ```
 
 ## Contribution
