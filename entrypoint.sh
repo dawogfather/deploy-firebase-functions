@@ -21,6 +21,11 @@ if [ -z "${DEPLOY_ONLY}" ]; then
     DEPLOY_ONLY = "functions"
 fi
 
+echo "Firebase Version" 
+firebase --version
+
+echo "Firebase using ${TARGET}" 
 firebase use ${TARGET}
 
+echo "Firebase deploy for ${DEPLOY_ONLY}" 
 firebase deploy --token ${FIREBASE_TOKEN} --only ${DEPLOY_ONLY}
